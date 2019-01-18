@@ -9,6 +9,8 @@ import task.manager.Application;
 
 import java.util.Scanner;
 
+import static task.manager.cofig.Topics.TASK;
+
 @Service
 public class TaskManagerCliService {
 
@@ -34,7 +36,7 @@ public class TaskManagerCliService {
                 isExitProgram = true;
             } else {
                 LOGGER.info("Sending message...");
-                template.convertAndSend("taskTopic", messageToSend);
+                template.convertAndSend(TASK.getRealTopicName(), messageToSend);
             }
         }
     }

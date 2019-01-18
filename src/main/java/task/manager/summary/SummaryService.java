@@ -11,7 +11,10 @@ import java.util.LinkedHashSet;
 
 public class SummaryService {
     public void printSummary(String summary) {
+        System.out.println("Summary received from Redis:\n");
+        System.out.println("********************************\n");
         System.out.println(summary);
+        System.out.println("********************************\n");
     }
 }
 
